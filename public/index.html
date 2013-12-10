@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>JUpload - A Quick Solution for Asynchronous and Resumable File Upload</title>
+    <link rel="shortcut icon" href="imgs/favicon.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/pygments.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body data-spy="scroll" data-target=".ju-docs-nav" data-offset="60">
+    <header class="navbar navbar-inverse navbar-fixed-top ju-docs-nav" role="banner" id="ju-header">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#content" class="navbar-brand">JUpload</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#features">Features</a>
+            </li>
+            <li>
+              <a href="#start">Get Started</a>
+            </li>
+            <li class="dropdown">
+              <a href="#examples">Options & Examples <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href='#viahtml'>Via HTML</a></li>
+                <li><a href='#viajavascript'>Via Javascript</a></li>
+                <li class="divider"></li>
+                <li><a href='#cis'>Change Input Style</a></li>
+                <li><a href='#smd'>Specify Message Div</a></li>
+                <li><a href='#mfi'>Multiple File Inputs</a></li>
+                <li><a href='#mmdds'>Multiple Message Divs & Drag Support</a></li>
+                <li><a href="#fuas">Folder Upload & Auto Start</a></li>
+                <li><a href="#subc">Server Url & Batch Control</a></li>
+                <li><a href="#stnl">Size, Type & Number Limit</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#customize">Customize</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#about">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="bs-header" id="content">
+      <div class="container">
+        <h1>JUpload</h1>
+        <p>An HTML5, Easy-to-implement, both-front-and-back-ends, and customizable solutions for asynchronous and resumable file upload.</p>
+      </div>
+    </div>
+
+    <div class="ju-shameless-slef-promotion">
+      <div class="container">
+        Version 0.1.0&nbsp;&nbsp;-&nbsp;&nbsp;
+        <a href="#">GitHub Project</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+        Created by <a href="https://twitter.com/jerry_zou">Jerry ZOU</a>
+      </div>
+    </div>
+
+    <div class="container ju-docs-container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
+            <h1 id="features"><i class="fa fa-cogs"></i> Features</h1>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p class="lead"><b>Easy to implement</b></p>
+          <p>JUpload’s client side is a jQuery plugin and the server side is a Node app.</p>
+        </div>
+        <div class="col-md-4">
+          <p class="lead"><b>Asynchronous</b></p>
+          <p>Upload process causes no interruption to a user’s interaction with the web app.</p>
+        </div>
+        <div class="col-md-4">
+          <p class="lead"><b>Resumable</b></p>
+          <p>Any upload process interrupted by user operations or unexpected errors is resumable.</p>
+        </div>
+        <div class="col-md-4">
+          <p class="lead"><b>Configurable & Customizable</b></p>
+          <p>JUpload is an open source project which you can easily set up or customize for production.</p>
+        </div>
+        <div class="col-md-4">
+          <p class="lead"><b>Large Files Support</b></p>
+          <p>Proceed or pause large files upload arbitrarily. Neither a second nor a byte is wasted.</p>
+        </div>
+        <div class="col-md-4">
+          <p class="lead"><b>Multiple Threads Capacity</b></p>
+          <p>Proceed hundreds of files upload within one second. Batch operations are also available for users to proceed or pause.</p>
+        </div>
+        <div class="col-md-4">
+          <p class="lead"><b>Folder Upload Support</b></p>
+          <p>Upload a folder including any file in any level of subdirectories.</p>
+        </div>
+        <div class="col-md-4">
+          <p class="lead"><b>Drag & Drop Support</b></p>
+          <p>Drag files and drop them to browser to upload.</p>
+        </div>
+        <div class="col-md-4">
+          <p class="lead"><b>Progress Monitoring</b></p>
+          <p>Every uploading file has its own progress bar.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
+            <h1 id="start"><i class="fa fa-cutlery"></i> Get Started</h1>
+          </div>
+          <p class="lead">I guess perhaps you would like to download the demo you're looking at now and get it running on your own computer. Then you could mess it up whatever way you like. To do so:</p>
+        </div>
+        <div class="col-md-4">
+          <p class="lead"><i class="fa fa-hand-o-right"></i><b>Firstly,</b></p>
+          <p>download the zip file of this demo and unzip it to wherever you like.</p>
+          <p><a class="btn btn-primary" href="#">Download from here</a></p>
+          <p><a class="btn btn-primary" href="#">Download from Github</a></p>
+          <p>This zip file includes source code of JUpload (both client side and server side) and everything else which is used by this demo.</p>
+        </div>
+        <div class="col-md-4">
+          <p class="lead"><i class="fa fa-hand-o-right"></i><b>Secondly,</b></p>
+          <p>download and install Node.js and MongoDB if you haven't.</p>
+          <p><a class="btn btn-primary" href="http://nodejs.org/download/">Download Node.js</a></p>
+          <p><a class="btn btn-primary" href="http://www.mongodb.org/downloads">Download MongoDB</a></p>
+          <p>Don't forget to start MongoDB server after the installation.</p>
+        </div>
+        <div class="col-md-4">
+          <p class="lead"><i class="fa fa-hand-o-right"></i><b>Lastly,</b></p>
+          <p>At command line and under the directory you unzipped the demo, enter:</p>
+          <p><code>node app</code></p>
+          <p>or if you have CoffeeScript installed, enter:
+          <p><code>coffee app.coffee</code></p>
+          <p>Then use your favourate browser to visit the following url:</p>
+          <p><code>http://localhost:3000</code></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
+            <h1 id="examples"><i class="fa fa-flask"></i> Options & Examples</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="viahtml">Via Html</h2>
+          <p>The easist way is adding <code>data-plugin="JUpload"</code> to a file input botton to automatically give it default JUpload features.</p>
+          <pre><code class="html"><span class="nt">&lt;input</span> <span class="na">data-plugin=</span><span class="s">"JUpload"</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">multiple=</span><span class="s">"multiple"</span><span class="nt">/&gt;</span></code></pre>
+          <div class="ju-example">
+            <form action="/fileimport" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input data-plugin="JUpload" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+          <p>We could choose a couple of files to see the effect. As shown about, JUpload gives file input buttons some features like asynchronous progress, resumable control, and so on.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="viajavascript">Via Javascript</h2>
+          <p>Assume the id of a file input is <code>jupload1</code>. The javascript could go like:</p>
+          <pre><code class="javascript"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"#jupload1"</span><span class="p">).</span><span class="nx">JUpload</span><span class="p">();</span>
+<span class="p">});</span></code></pre>
+          <div class="ju-example">
+            <form action="/fileimport" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input id="jupload1" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+          <p>This just achieved the same effect as the above html did.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="cis">Change Input Style</h2>
+          <p>As we might feel a little bit uncomfortable about the default look of the file input, let's change it with the <code>customInput</code> option.</p>
+          <pre><code class="javascript"><span class="nx">$</span><span class="p">(</span><span class="s2">"#jupload2"</span><span class="p">).</span><span class="nx">JUpload</span><span class="p">({</span><span class="nx">customInput</span><span class="o">:</span><span class="kc">true</span><span class="p">});</span></code></pre>
+          <div class="ju-example">
+            <form action="/fileimport" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input id="jupload2" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+          <p>Looks better now, does it...</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="smd">Specify Message Div</h2>
+        </div>
+        <div class="col-md-4">
+          <p>As we have noticed, the files upload UI is automatically rendered below the form. However sometimes we need to render it in a specific place. How about the div whose id is <code>messages3</code> on the right hand? We could simply do it by adding the <code>fileContainer</code> option.</p>
+          <pre><code class="javascript"><span class="nx">$</span><span class="p">(</span><span class="s2">"#jupload3"</span><span class="p">).</span><span class="nx">JUpload</span><span class="p">({</span><span class="nx">customInput</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span> <span class="nx">fileContainer</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#messages3"</span><span class="p">)});</span></code></pre>
+          <p>Give it a try...</p>
+          <div class="ju-example">
+            <form action="/fileimport" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input id="jupload3" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div id="messages3"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="mfi">Multiple File Inputs</h2>
+          <p>Sometimes we would like to have multiple access points of the file upload function, especially in the case of single page app. Let's start the task by assgining an identical class <code>ju-mfi1</code> to all the file inputs. Then in Javascript:</p>
+          <pre><code class="javascript"><span class="nx">$</span><span class="p">(</span><span class="s2">".ju-mfi1"</span><span class="p">).</span><span class="nx">JUpload</span><span class="p">({</span><span class="nx">customInput</span><span class="o">:</span><span class="kc">true</span><span class="p">});</span></code></pre>
+        </div>
+        <div class="col-md-4">
+          <div class="ju-example">
+            <form action="/fileimport" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input class="ju-mfi1" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ju-example">
+            <form action="/fileimport" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input class="ju-mfi1" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ju-example">
+            <form action="/fileimport" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input class="ju-mfi1" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>We can even change the style of each input with an auto generated class named <code>btn-custom1(2,3...)</code> Oops! I have to doubt my taste on styling. But I am sure you can do better.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="mmdds">Multiple Message Divs & Drag Support</h2>
+          <p>Yet we still haven't been satisfied because it might be better sometimes if each input has its own specified message div. Oh, it could be even better if we can drag files into any div when we need to.</p>
+          <p>Luckily it's not that complicated as it looks like. Firstly, let's assgin an identical class, for example let's say <code>mfi-msg</code>, to each div that we choose to be the message area. Then with a single line of Javascript:</p>
+          <pre><code class="javascript"><span class="nx">$</span><span class="p">(</span><span class="s2">".ju-mfi2"</span><span class="p">).</span><span class="nx">JUpload</span><span class="p">({</span><span class="nx">customInput</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span> <span class="nx">fileContainer</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s2">".mfi-msg"</span><span class="p">),</span> <span class="nx">dragSupport</span><span class="o">:</span><span class="kc">true</span><span class="p">});</span></code></pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="ju-example">
+            <form action="/fileimport" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input class="ju-mfi2" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+          <div class="mfi-msg mfi-msg-s1"></div>
+        </div>
+        <div class="col-md-8">
+          <div class="ju-example">
+            <form action="/fileimport" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input class="ju-mfi2" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+          <div class="mfi-msg mfi-msg-s2"></div>
+          <div class="ju-example">
+            <form action="/fileimport" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input class="ju-mfi2" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+          <div class="mfi-msg mfi-msg-s3"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>Tough the appearance is kind of rough, the drag and drop seems cool...</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="fuas">Folder Upload & Auto Start</h2> 
+          <p>We would be really unhappy if we need to upload all files in a folder with complexly structured subfolders. It will definitely save us a lot of clicks if the upload program does the dirty work for us. Here comes the Folder Upload feature for the rescue.</p>
+          <p>Let's do a little arrangement. How about we still begin with a normal file input <code>u-fu-files</code>. And next to it we place an input <code>u-fu-folder</code> with folder upload feature. Then we can choose between them according to our mood... Below the inputs we will have two message divs. The left one <code>m-u-fu-files</code> for normal files chosen and the right one <code>m-u-fu-folder</code> for files chosen by folder upload feature. The normal file input might looks a little pale compared with its sibling. So let's give it an auto start feature which allows the uploading process to begin automatically after some files are chosen. This time we will need two lines of Javascript to do the job. Should be enough to ask for raises...</p>
+          <pre><code class="javascript"><span class="nx">$</span><span class="p">(</span><span class="s2">"#ju-fu-files"</span><span class="p">).</span><span class="nx">JUpload</span><span class="p">({</span><span class="nx">customInput</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span> <span class="nx">fileContainer</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#m-ju-fu-files"</span><span class="p">),</span> <span class="nx">autoStart</span><span class="o">:</span><span class="kc">true</span><span class="p">});</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"#ju-fu-folder"</span><span class="p">).</span><span class="nx">JUpload</span><span class="p">({</span><span class="nx">customInput</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span> <span class="nx">fileContainer</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#m-ju-fu-folder"</span><span class="p">),</span> <span class="nx">folderUpload</span><span class="o">:</span><span class="kc">true</span><span class="p">});</span></code></pre>
+          <div class="ju-example">
+            <form action="/fileimport" method="POST" enctype="multipart/form-data" class="form-inline">
+              <div class="form-group">
+                <input id="ju-fu-files" type="file" multiple="multiple"/>
+              </div>
+              <div class="form-group">
+                <input id="ju-fu-folder" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="m-ju-fu-files"></div>
+        </div>
+        <div class="col-md-6">
+          <div id="m-ju-fu-folder"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="subc">Server Url & Batch Control</h2>
+          <p>For some older browsers that doesn't support JUpload, we may still want its original server side script to handel the files uploaded. But we need JUpload's server side handler to take over automatically if the browser is compatible. In this case we could just keep the upload form's original action attribute and then specify a Server Url when we invoke JUpload. Our original form looks like:</p>
+          <pre><code class="html"><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/original"</span> <span class="na">method=</span><span class="s">"POST"</span> <span class="na">enctype=</span><span class="s">"multipart/form-data"</span><span class="nt">&gt;</span></code></pre>
+          <p>However only by doing this should not make our next example attractive. Let's add another feature called Batch Control which allows us to action or pause all uploads together when there are more than two files. Okey, now let's have a look at our Javascript.</p>
+          <pre><code class="javascript"><span class="nx">$</span><span class="p">(</span><span class="s2">"#ju-subc"</span><span class="p">).</span><span class="nx">JUpload</span><span class="p">({</span><span class="nx">serverUrl</span><span class="o">:</span><span class="s1">'/fileimport'</span><span class="p">,</span> <span class="nx">batchControl</span><span class="o">:</span><span class="kc">true</span><span class="p">});</span></code></pre>
+          <div class="ju-example">
+            <form action="/original" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input id="ju-subc" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="stnl">Size, Type & Number Limit</h2>
+          <p>Assume we're running a photo storage site. So we need to limit uploaded file types to jpg, jpeg and png. In addition the size of any file should be less then 2MB and the number of files should be less than 10 at a time. Let's get our hands dirty and implement these limits.</p>
+          <pre><code class="javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">'#ju-stnl'</span><span class="p">).</span><span class="nx">JUpload</span><span class="p">({</span><span class="nx">extFilter</span><span class="o">:</span><span class="s2">"jpg|jpeg|png"</span><span class="p">,</span> <span class="nx">maxSize</span><span class="o">:</span><span class="mi">2</span><span class="o">*</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="p">,</span> <span class="nx">maxNumberFiles</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span> <span class="nx">batchControl</span><span class="o">:</span><span class="kc">true</span><span class="p">});</span></code></pre>
+          <div class="ju-example">
+            <form action="/original" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input id="ju-stnl" type="file" multiple="multiple"/>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
+            <h1 id="customize"><i class="fa fa-wrench"></i> Customize</h1>
+          </div>
+          <p class="lead"><i class="fa fa-hand-o-right"></i> Something to confess...</p>
+          <p>I have to go ahead and admit that JUpload is still at its early stage of development. It might be okey for playing around or some not-too-serious implementations. However for production purpose it still needs some customization accordingly.</p>
+          <p class="lead"><i class="fa fa-hand-o-right"></i> Something about the source code...</p>
+          <p>Both the server side and the client side of JUpload have been written in <b><a href="http://coffeescript.org/">CoffeeScript</a></b>. But if you are not a CoffeeScript fan, the compiled js files should also be easy to modify.</p>
+          <p class="lead"><i class="fa fa-hand-o-right"></i> Something about the client side...</p>
+          <p>The client side of JUpload is merely a jQuery plugin jupload.js (the compressed version is jupload.min.js) which should be not too hard to customize. Therefore the only hard dependence for JUpload to run in browser is the <b><a href="http://jquery.com/">jQuery</a></b> library. As for this demo, I have imported some other css or js files, but it's for this demo only.</p>
+          <p class="lead"><i class="fa fa-hand-o-right"></i> Something about the server side...</p>
+          <p>The main part of the server side is just a js file (app.js) with dozens of lines which is running with the power of <b><a href="http://nodejs.org/">Node</a></b>. And <b><a href="http://www.mongodb.org/">MongoDB</a></b> which serves as the persistent layer for file information storage could be replaced with any other database. In fact we can even go without database at all. For example we can use arrays instead. Yet we may lose the capacity of resuming paused upload due to server error or app crash.</p>
+          <p class="lead"><i class="fa fa-hand-o-right"></i> Something about the coupling html and css...</p>
+          <p>I am really mortified about the coupling html and css in the client side jQuery plugin. However I haven't found an elegant way to get rid of them and still keep the esay-to-implement feature. If you only want to change how the upload UI looks like, just define a css file with classes used by the plugin. And if you want to make a whole new UI, you may need to rewrite the html template defined in the source code.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header">
+            <h1 id="about"><i class="fa fa-smile-o"></i> About</h1>
+          </div>
+          <p class="lead"><i class="fa fa-hand-o-right"></i> Motivation</p>
+          <p>I was refactoring one of my project dealing with docs search and generating the other day, thinking about how to improve the experience of the docs upload. So far as I knew, file upload is so widely implemented in websties and web apps, however, uploading files through web browser could be painful experience for both users and developers because the native http protocol is a little too simple to achieve a lot of sophisticated features. After hours of serious googling, I couldn't find an open source solution with all the <b><a href="#features">features</a></b> I want. So I decided to create JUpload for anyone who is seeking something silmilar like me.</p>
+          <p class="lead"><i class="fa fa-hand-o-right"></i> Inspiration</p>
+          <p>I really appreciate all the amazing projects which made this shabby little project possible and I also want to thank all the brilliant people who created them.</p>
+        </div>
+        <div class="col-md-4">
+          <p><b><a href="http://coffeescript.org/">CoffeeScript</a></b>: Perhaps lots of senior js developers seem it as unnecessary, but I myself, as a js rookie, really love it...</p>
+        </div>
+        <div class="col-md-4">
+          <p><b><a href="http://jquery.com/">jQuery</a></b>: A jQuery plugin is really easy to write and reuse by others.</p>
+        </div>
+        <div class="col-md-4">
+          <p><b><a href="http://nodejs.org/">Node.js</a></b>: I could never find anything else faster for handling hundreds of uploaded files simultaneously yet asynchronously.</p>
+        </div>
+        <div class="col-md-4">
+          <p><b><a href="http://expressjs.com/">Express</a></b>: Even though I've only leveraged a little bit of its routes handling ability, I can't help digging deeper. </p>
+        </div>
+        <div class="col-md-4">
+          <p><b><a href="https://npmjs.org/package/formidable">Formidable</a></b>: I reckon it as the first choice in Node when it comes to form data parsing. Really fast and stable.</p>
+        </div>
+        <div class="col-md-4">
+          <b><a href="http://www.mongodb.org/">MongoDB</a></b>: It's amazingly easy to set up and use. In addition it works really fine with Node.</p>
+        </div>
+        <div class="col-md-4">
+          <b><a href="http://getbootstrap.com/">Bootstrap</a></b>: I can never deliver this demo so fast without it.</p>
+        </div>
+        <div class="col-md-4">
+          <b><a href="http://fontawesome.io/">Font Awesome</a></b>: As for icons, it's good alternative to default Glyphicons in Bootstrap.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container text-center">
+        <div> JUpload 0.1.0 - Created by <a href="https://twitter.com/jerry_zou">Jerry ZOU</a></div>
+        <div>
+          Code licensed under <a href="http://opensource.org/licenses/mit-license.html">MIT License</a> - 
+          Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jupload.min.js"></script>
+    <script src="js/site.js"></script>
+  </body>
+</html>

@@ -14,6 +14,8 @@ Features
 
 * **Resumable:** Any upload process interrupted by user operations or unexpected errors is resumable.
 
+* **Mobile Friendly:** No plugin needed. Get along well with unstable mobile network and prevent traffic from wasting.
+
 * **Configurable & Customizable:** JUpload is an open source project which you can easily set up or customize for production.
 
 * **Large Files Support:** Proceed or pause large files upload arbitrarily. Neither a second nor a byte is wasted.

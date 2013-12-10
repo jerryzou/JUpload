@@ -18,6 +18,10 @@ $(document).ready(function(){
       $("html,body").animate({scrollTop: ($($(this).attr("href")).offset().top-55)}, 500);
     }
   });
+  if(window.location.href.indexOf("#")>-1){
+    $("html,body").animate({scrollTop: ($(window.location.hash).offset().top-55)}, 500);
+    window.location.hash = "";
+  }
   $(document).on("click", function(){
     if($("li").hasClass("open")){
       $("li").removeClass("open");

@@ -30,3 +30,18 @@ Get Started
 ------------------------
 
 **Firstly,** [download the zip file](https://github.com/jerryzou/JUpload/archive/master.zip) of this demo and unzip it to wherever you like.
+
+**Secondly,** download and install [Node.js](http://nodejs.org/download/) and [MongoDB](http://www.mongodb.org/downloads) if you haven't. Don't forget to start MongoDB server after the installation.
+
+**Lastly,** At command line and under the directory you unzipped the demo, enter: `node app` or if you have CoffeeScript installed, enter: `coffee app.coffee` Then use your favourate browser to visit the following url: `http://localhost:3000`
+
+Usage & Demos
+------------------------
+
+### Via Html
+The easist way is adding `data-plugin="JUpload"` to a file input botton to automatically give it default JUpload features.
+[Demo Link](http://jerryit.com/jupload#viahtml)
+
+### Via Javascript
+Assume the id of a file input is `jupload1`. The javascript could go like: `$("#jupload1").JUpload();`
+[Demo Link](http://jerryit.com/jupload#viajavascript)

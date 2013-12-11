@@ -5,6 +5,8 @@ An HTML5, Easy-to-implement, both-front-and-back-ends, and customizable solution
 
 *In case you want to have a look: [Demo Link](http://jerryit.com/jupload).*
 
+[![Jupload File Uploading](http://jerryit.com/jupload/imgs/juploadfileui.png)](http://jerryit.com/jupload)
+
 Features
 ------------------------
 
@@ -130,3 +132,7 @@ I really appreciate all the amazing projects which made this shabby little proje
 * **Bootstrap:** I can never deliver the demo so fast without it.
 
 * **Font Awesome:** As for icons, it's good alternative to default Glyphicons in Bootstrap.
+
+#### Change Log
+
+* V0.1.0 (10 December 2013) - First Release

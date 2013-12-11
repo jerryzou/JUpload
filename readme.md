@@ -113,7 +113,16 @@ About
 
 I was refactoring one of my project dealing with docs search and generating the other day, thinking about how to improve the experience of the docs upload. So far as I knew, file upload is so widely implemented in websties and web apps, however, uploading files through web browser could be painful experience for both users and developers because the native http protocol is a little too simple to achieve a lot of sophisticated features. After hours of serious googling, I couldn't find an open source solution with all the features I want. So I decided to create JUpload for anyone who is seeking something silmilar like me.
 
-#### Inspiration
+#### Thinking & Trying
+For the sake of user experience, **Flash** or **Java Applet** seem not to be in the candidate list. Considering more and more traffic comes from mobiles, maybe stay in pure **Javascript** will assure most of compatibility. At least we sitll have **jQuery** to shorten the development circle. Additionally, jQuery plugin could also be easily integrated by other projects.
+
+For sending files to server, the good news is popular browsers nowadays all support **XHR2** pretty well. But the bad news is it doesn't have native support to pause or resume the sending process. Being resumable is very important because files like videos and photos taken by smartphones are getting larger and the mobile network is often unstable. Therefore it will save a lot of traffic if the sending process is able to resume from the break point.
+
+At first, I tried slicing files into chunks and sending them with **Socket.IO**. But the problem is it generates too many requests and slows down the progress and if the process fails, we might waste some traffic as well. So in the end I decided to send data as much as possible. If the process fails, the server will keep record of everything to power possible resuming.
+
+For the server side support, the powerful asynchronous capacity of **Node.js** is really suitable for handling multiple uploaded files. Furthermore We could use **Express** to handle upload, resuming, download request within one end point. As for parsing large data, **Formidable** will come in handy. However we need to overwrite its native method a little to gain the ability of handling resuming upload.
+
+#### Many Thanks
 
 I really appreciate all the amazing projects which made this shabby little project possible and I also want to thank all the brilliant people who created them.
 

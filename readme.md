@@ -92,7 +92,7 @@ I have to go ahead and admit that JUpload is still at its early stage of develop
 
 #### Something about the source code...
 
-Both the server side (/app.coffee) and the client side (/public/js/jupload.coffee) of JUpload have been written in CoffeeScript. But if you are not a CoffeeScript fan, the compiled js files should also be easy to modify.
+Both the server side (**/app.coffee**) and the client side (**/public/js/jupload.coffee**) of JUpload have been written in CoffeeScript. But if you are not a CoffeeScript fan, the compiled js files should also be easy to modify.
 
 #### Something about the client side...
 
